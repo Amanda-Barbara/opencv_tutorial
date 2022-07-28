@@ -18,7 +18,7 @@ import numpy as np   # numpy数值计算工具包
 # %%
 # 礼帽 
 # 原始带刺，开运算不带刺，原始输入-开运算 = 刺
-img = cv2.imread('01_Picture/05_Dige.png')
+img = cv2.imread('01_Picture/05_Dige.png', cv2.IMREAD_GRAYSCALE)
 kernel = np.ones((5,5),np.uint8)
 tophat = cv2.morphologyEx(img,cv2.MORPH_TOPHAT,kernel)
 opening = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel)
